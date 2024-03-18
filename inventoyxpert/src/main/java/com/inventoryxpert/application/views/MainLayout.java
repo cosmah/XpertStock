@@ -2,6 +2,8 @@ package com.inventoryxpert.application.views;
 
 import com.inventoryxpert.application.views.Invoicing.AddInvoice;
 import com.inventoryxpert.application.views.Invoicing.Purchase;
+import com.inventoryxpert.application.views.Invoicing.editor.Category;
+import com.inventoryxpert.application.views.Invoicing.editor.InvoiceEditor;
 import com.inventoryxpert.application.views.about.AboutView;
 import com.inventoryxpert.application.views.dashboard.DashboardView;
 import com.inventoryxpert.application.views.people.PeopleView;
@@ -12,6 +14,7 @@ import com.inventoryxpert.application.views.people.employees.Employees;
 import com.inventoryxpert.application.views.products.Inventory;
 import com.inventoryxpert.application.views.products.ProductView;
 import com.inventoryxpert.application.views.terms.Terms;
+
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -75,6 +78,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new SideNavItem("Employees list", Employees.class, LineAwesomeIcon.LIST_ALT.create()));
         nav.addItem(new SideNavItem("Add terms of payment", Terms.class, LineAwesomeIcon.TIMES_CIRCLE.create()));
         nav.addItem(new SideNavItem("Purchase", Purchase.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("Create Invoice", InvoiceEditor.class, LineAwesomeIcon.STRIPE.create()));
 
         return nav;
     }
