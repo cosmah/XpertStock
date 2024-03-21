@@ -14,6 +14,7 @@ import com.inventoryxpert.application.views.people.employees.Employees;
 import com.inventoryxpert.application.views.products.Inventory;
 import com.inventoryxpert.application.views.products.ProductView;
 import com.inventoryxpert.application.views.terms.Terms;
+import com.inventoryxpert.application.views.Invoicing.invoice.CreateInvoice;
 
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -78,7 +79,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new SideNavItem("Employees list", Employees.class, LineAwesomeIcon.LIST_ALT.create()));
         nav.addItem(new SideNavItem("Add terms of payment", Terms.class, LineAwesomeIcon.TIMES_CIRCLE.create()));
         nav.addItem(new SideNavItem("Purchase", Purchase.class, LineAwesomeIcon.FILE.create()));
-        nav.addItem(new SideNavItem("Create Invoice", InvoiceEditor.class, LineAwesomeIcon.STRIPE.create()));
+        nav.addItem(new SideNavItem("Create invoice", CreateInvoice.class, LineAwesomeIcon.FILE.create()));
 
         return nav;
     }
