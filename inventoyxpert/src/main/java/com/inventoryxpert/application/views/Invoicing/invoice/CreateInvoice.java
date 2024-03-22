@@ -89,7 +89,7 @@ public class CreateInvoice extends Div {
             }
         });
 
-        rowLayout.add(plusButton, cellGroupLayout, deleteButton);
+        rowLayout.add( cellGroupLayout, plusButton);
 
         // Add the row layout to the view
         add(rowLayout);
