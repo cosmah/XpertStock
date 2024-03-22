@@ -14,20 +14,23 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String fullName;
-    private String email;
-    private String phone;
+    private String product;
+    private String description;
+    private int quantity;
+    private double cost;
+    private double totalCost;
 
-    private String  address;
+    public Person() {
+        // You can leave this constructor empty if you don't need to initialize anything
+    }
 
-    // Constructors, getters, and setters
-
-    public Person(Long id, String fullName, String email, String phone, String address) {
+    public Person(Long id, String product, String description, int quantity, double cost, double totalCost) {
         this.id = id;
-        this.fullName = fullName;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
+        this.product = product;
+        this.description = description;
+        this.quantity = quantity;
+        this.cost = cost;
+        this.totalCost = totalCost;
     }
 
     public Long getId() {
@@ -38,35 +41,43 @@ public class Person {
         this.id = id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getProduct() {
+        return product;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setProduct(String product) {
+        this.product = product;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDescription() {
+        return description;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getAddress() {
-        return address;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getPhone() {
-        return phone;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
+    public double getCost() {
+        return cost;
+    }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public double getTotalCost() {
+        return totalCost;
+    }
+
+    public void setTotalCost(double totalCost) {
+        this.totalCost = totalCost;
     }
 }
